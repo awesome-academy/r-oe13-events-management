@@ -1,0 +1,65 @@
+<header id="header">
+  <div id="top-header">
+    <div class="container">
+      <div class="container">
+        <div class="header-links">
+          <ul>
+            <li><%= link_to t(".about_me"), "#" %></li>
+            <li><%= link_to t(".contact"), "#" %></li>
+            <li><%= link_to t(".advertisement"), "#" %></li>
+            <li><%= link_to t(".privacy"), "#" %></li>
+            <li><%= link_to "#" do %><i class="fa fa-sign-in"></i> <%= t ".login" %><% end %></li>
+          </ul>
+        </div>
+        <div class="header-social">
+          <ul>
+            <li><%= link_to "#" do %><i class="fa fa-facebook"></i><% end %></li>
+            <li><%= link_to "#" do %><i class="fa fa-twitter"></i><% end %></li>
+            <li><%= link_to "#" do %><i class="fa fa-google-plus"></i><% end %></li>
+            <li><%= link_to "#" do %><i class="fa fa-instagram"></i><% end %></li>
+            <li><%=link_to "#" do %><i class="fa fa-youtube"></i><% end %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="center-header">
+    <div class="container">
+      <div class="header-logo">
+        <%= link_to root_path, class: "logo" do %>
+          <%= image_tag("logo.png", alt: "") %>
+        <% end %>
+      </div>
+      <div class="header-ads">
+        <%= image_tag("chapcanhuocmo.png", class: "center-block") %>
+      </div>
+    </div>
+  </div>
+  <div id="nav-header">
+    <div class="container">
+      <nav id="main-nav">
+        <div class="nav-logo">
+          <%= link_to root_path, class: "logo" do %>
+            <%= image_tag("logo.png", alt: "") %>
+          <% end %>
+        </div>
+        <ul class="main-nav nav navbar-nav">
+          <li class="active"><%= link_to t(".home"), root_path %></li>
+          <li><%= link_to t(".new") %></li>
+          <li><%= link_to t(".event") %></li>
+          <li><%= link_to t(".category") %></li>
+          <li><%= link_to t(".donation") %></li>
+        </ul>
+      </nav>
+      <div class="button-nav">
+        <button class="search-collapse-btn"><i class="fa fa-search"></i></button>
+        <button class="nav-collapse-btn"><i class="fa fa-bars"></i></button>
+        <div class="search-form">
+          <form>
+            <input class="input" type="text" name="search" placeholder="Search">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -7,9 +7,12 @@
 
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= favicon_link_tag "logo_icon.ico" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+      <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
