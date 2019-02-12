@@ -107,15 +107,6 @@ ActiveRecord::Schema.define(version: 2019_02_11_032843) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_tags_on_category_id"
-    t.index ["user_id"], name: "index_tags_on_user_id"
-  end
-
   create_table "user_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "status"
@@ -124,6 +115,15 @@ ActiveRecord::Schema.define(version: 2019_02_11_032843) do
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_user_events_on_event_id"
     t.index ["user_id"], name: "index_user_events_on_user_id"
+  end
+
+  create_table "user_settings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_user_settings_on_category_id"
+    t.index ["user_id"], name: "index_user_settings_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -155,9 +155,9 @@ ActiveRecord::Schema.define(version: 2019_02_11_032843) do
   add_foreign_key "notifications", "events"
   add_foreign_key "notifications", "users"
   add_foreign_key "posts", "events"
-  add_foreign_key "tags", "categories"
-  add_foreign_key "tags", "users"
   add_foreign_key "user_events", "events"
   add_foreign_key "user_events", "users"
+  add_foreign_key "user_settings", "categories"
+  add_foreign_key "user_settings", "users"
   add_foreign_key "users", "roles"
 end
