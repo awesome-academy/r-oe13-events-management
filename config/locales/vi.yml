@@ -1,0 +1,22 @@
+vi:
+  layouts:
+    footer:
+      about_me: "Về chúng tôi"
+      contact: "Liên hệ"
+      advertisement: "Quảng cáo"
+      privacy: "Riêng tư"
+      copyright: "Đã đăng kí bản quyền | Trang này được thực hiện với"
+      copyright_link: "của %{cuteteam_link}"
+      team_link: "CuteTeam"
+      facebook_link: "https://www.facebook.com/phong.truong.71216141"
+    header:
+      about_me: "Về chúng tôi"
+      contact: "Liên hệ"
+      advertisement: "Quảng cáo"
+      privacy: "Riêng tư"
+      login: "Đăng nhập"
+      home: "Trang chủ"
+      new: "Tin mới"
+      event: "Sự kiện"
+      category: "Danh mục"
+      donation: "Quyên góp"

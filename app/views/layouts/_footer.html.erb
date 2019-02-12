@@ -1,0 +1,28 @@
+<footer id="footer">
+  <div id="bottom-footer" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-push-6">
+          <ul class="footer-links">
+            <li><%= link_to t(".about_me"), "#" %></li>
+            <li><%= link_to t(".contact"), "#" %></li>
+            <li><%= link_to t(".advertisement"), "#" %></li>
+            <li><%= link_to t(".privacy"), "#" %></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <div class="footer-copyright">
+            <span>
+              <%= t ".copyright" %>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
+              <%= raw t(".copyright_link",
+                cuteteam_link: link_to(t(".team_link"), t(".facebook_link"), target:"_blank")
+              )%>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="back-to-top"></div>
