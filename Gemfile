@@ -23,6 +23,9 @@ gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "rspec-rails"
+  gem "faker"
 end
 
 group :development do
@@ -36,6 +39,9 @@ group :test do
   gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
+  gem "shoulda"
+  gem "shoulda-matchers", require: false
+  gem "database_cleaner"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
