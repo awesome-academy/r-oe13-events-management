@@ -8,4 +8,14 @@ class User < ApplicationRecord
   has_many :events, through: %i(user_events notifications)
   has_many :comments
   has_many :post, through: :comments
+  mount_uploader :avatar, AvatarUploader
+  validate  :avatar_size
+
+  private
+
+  def avatar_size
+    if avatar.size > Settings.avatar_size_max.megabytes
+      errors.add :avatar, I18n.t("file_less_than")
+    end
+  end
 end

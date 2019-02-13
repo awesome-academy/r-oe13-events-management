@@ -1,4 +1,5 @@
 vi:
+  file_less_than: "Cần nhỏ hơn 5MB"
   layouts:
     footer:
       about_me: "Về chúng tôi"
@@ -15,8 +16,18 @@ vi:
       advertisement: "Quảng cáo"
       privacy: "Riêng tư"
       login: "Đăng nhập"
+      logout: "Đăng xuất"
+      edit: "Chỉnh sửa"
       home: "Trang chủ"
-      new: "Tin mới"
+      post: "Bài viết"
+      create_post: "Tạo bài viết"
+      all_post: "Tất cả bài viết"
+      manage_post: "Quản lý bài viết"
       event: "Sự kiện"
+      create_event: "Tạo sự kiện"
+      all_event: "Tất cả sự kiện"
+      manage_event: "Quản lý sự kiện"
       category: "Danh mục"
       donation: "Quyên góp"
+      manage_donate: "Quản lý quỹ"
+      statistical: "Thống kê"
