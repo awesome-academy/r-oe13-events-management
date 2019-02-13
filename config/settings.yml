@@ -1,1 +1,6 @@
 avatar_size_max: 5
+min_length_text: 50
+
+role_admin: "admin"
+role_organizer: "organizer"
+

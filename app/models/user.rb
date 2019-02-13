@@ -8,8 +8,10 @@ class User < ApplicationRecord
   has_many :events, through: %i(user_events notifications)
   has_many :comments
   has_many :posts, through: :comments
+  belongs_to :role
   mount_uploader :avatar, AvatarUploader
   validate  :avatar_size
+  delegate :name, to: :role, prefix: :role, allow_nil: true
 
   private
 
