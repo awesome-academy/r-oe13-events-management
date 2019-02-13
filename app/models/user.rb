@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :notifications
   has_many :events, through: %i(user_events notifications)
   has_many :comments
-  has_many :post, through: :comments
+  has_many :posts, through: :comments
   mount_uploader :avatar, AvatarUploader
   validate  :avatar_size
 
