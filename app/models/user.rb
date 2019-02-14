@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   extend Devise::Models
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  before_validation :set_default_role
   has_many :user_settings
   has_many :categories, through: :user_settings
   has_many :user_events
@@ -19,5 +20,9 @@ class User < ApplicationRecord
     if avatar.size > Settings.avatar_size_max.megabytes
       errors.add :avatar, I18n.t("file_less_than")
     end
+  end
+
+  def set_default_role
+    self.role = Role.find_by_name(Settings.role_member)
   end
 end

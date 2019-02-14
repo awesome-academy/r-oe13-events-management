@@ -24,11 +24,11 @@
           <td class="text-col"><%= post.body.html_safe %></td>
           <td class="text-col"><%= post.event.name %></td>
           <td class="text-col">
-            <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"),  method: :delete,
+            <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:organizer, post], method: :delete,
             data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" %>
           </td>
           <td class="text-col">
-            <%= link_to "#" do %>
+            <%= link_to edit_organizer_post_path(post) do %>
               <i class="fa fa-refresh"></i>
             <% end %>
           </td>
