@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   concern :paginatable do
     get "(page/:page)", action: :index, on: :collection, as: ""
   end
+  devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
   scope "(:locale)", locale: /en|vi/ do
-    devise_for :users
+    devise_for :users, skip: :omniauth_callbacks
     devise_scope :user do
       get "/login" => "devise/sessions#new"
       get "/logout" => "devise/sessions#destroy"
