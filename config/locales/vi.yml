@@ -3,6 +3,8 @@ vi:
   file_less_than: "Cần nhỏ hơn 5MB"
   success: "Thành công"
   error: "Thất bại"
+  sure: "Bạn chắc chắn chứ? Hành động không thể hoàn tác"
+  admin_only: "Chỉ dành cho quản trị viên"
   events:
     all_event:
       event: "Sự kiện"
@@ -34,6 +36,10 @@ vi:
       map: "Bản đồ:"
       notice: "(A là địa điểm hiện tại của bạn, B là địa điểm tổ chứ sự kiện. Vui lòng tải lại trang nếu không hiện chỉ đường)"
   layouts:
+    admin_layout:
+      title: "ROe13EventsManagement"
+    application:
+      title: "ROe13EventsManagement"
     footer:
       about_me: "Về chúng tôi"
       contact: "Liên hệ"
@@ -64,6 +70,7 @@ vi:
       donation: "Quyên góp"
       manage_donate: "Quản lý quỹ"
       statistical: "Thống kê"
+      manage_user: "Quản lý người dùng"
     sidebar:
       contact_us: "Liên lạc với chúng tôi"
       facebook: "Facebook"
@@ -115,4 +122,37 @@ vi:
       event: "Sự kiện"
       donate: "Quyên góp"
       new: "Mới"
-
+  admin:
+    users:
+      index:
+        users_title: "Quản lý người dùng"
+        avatar: "Ảnh đại diện"
+        name: "Tên người dùng"
+        emai: "Email"
+        role: "Vai trò"
+        tools: "Chức năng"
+        new_user: "Thêm tài khoản"
+        create: "Tạo tài khoản"
+        cancle: "Hủy bỏ"
+        search: "Tìm kiếm"
+        search_placeholder: "Nhập vào tên hoặc email"
+      user:
+        update: "Cập nhật"
+        delete: "Xóa"
+  users:
+    show:
+      profile: "Thông tin cá nhân"
+      name: "Họ và tên:"
+      role: "Quyền hạn:"
+      email: "Email:"
+      phone_number: "Số điện thoại:"
+      address: "Địa chỉ:"
+      created_at: "Ngày tham gia:"
+      back: "Quay lại"
+  views:
+    pagination:
+      first: "«"
+      last: "»"
+      previous: "‹"
+      next: "›"
+      truncate: "…"

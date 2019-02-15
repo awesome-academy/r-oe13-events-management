@@ -1,7 +1,8 @@
-//= require jquery
-//= require owl.carousel
 //= require bootstrap
-//= require rails-ujs
+//= require jquery
+//= require bootstrap-sprockets
+//= require jquery_ujs
+//= require owl.carousel
 //= require activestorage
 //= require ckeditor/init
 //= require turbolinks
