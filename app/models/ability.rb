@@ -4,7 +4,7 @@ class Ability
     @user = user || User.new
     role = @user.role_name
     if role == Settings.role_admin
-      can :manager, :all
+      can :manage, :all
     elsif role == Settings.role_organizer
       can :create, Post
       can :read, :all

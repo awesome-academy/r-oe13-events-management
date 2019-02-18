@@ -2,10 +2,9 @@ $(document).ready(function(){
   if ($('textarea').length > 0) {
     var data = $('.ckeditor');
     $.each(data, function(i) {
-      CKEDITOR.replace(data[i].id)
+      CKEDITOR.replace(data[i].id);
     });
   }
-});
 CKEDITOR.editorConfig = function(config){
    config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
 
@@ -52,7 +51,7 @@ CKEDITOR.editorConfig = function(config){
   ];
   CKEDITOR.config.image_previewText = "Image Preview";
 };
-
+CKEDITOR.inlineAll
 CKEDITOR.on( 'dialogDefinition', function(ev){
     var dialogName = ev.data.name;
     var dialogDefinition = ev.data.definition;
@@ -76,3 +75,4 @@ CKEDITOR.on( 'dialogDefinition', function(ev){
       dialogDefinition.removeContents('advanced');
     }
   });
+});

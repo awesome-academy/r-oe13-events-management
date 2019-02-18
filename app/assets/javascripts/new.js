@@ -1,4 +1,4 @@
-function initMap(){
+function initMapnew(){
   var options = {
     zoom: 18,
     center: {lat: 21.0170075, lng: 105.7824571}

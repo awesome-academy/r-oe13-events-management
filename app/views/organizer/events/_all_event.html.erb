@@ -1,8 +1,8 @@
 <article class="article row-article">
-  <div class="article-img">
-    <a href="#">
+  <div class="article-img article-img-allevent">
+    <%= link_to organizer_event_path(event) do %>
       <%= image_tag(event.banner.url, alt:"") %>
-    </a>
+    <% end %>
   </div>
   <div class="article-body">
     <ul class="article-info">

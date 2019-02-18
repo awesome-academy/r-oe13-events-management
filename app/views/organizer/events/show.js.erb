@@ -1,0 +1,2 @@
+$('#posts-event').html('<%= j render(partial:"organizer/events/post", collection: @posts, as: :post) %>');
+$('#paginator-post').html('<%= j paginate(@posts, theme: "twitter-bootstrap-3", remote: true) %>');

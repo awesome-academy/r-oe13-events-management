@@ -1,7 +1,7 @@
 <div id="owl-carousel-1" class="owl-carousel owl-theme center-owl-nav">
   <% @posts.each do |post|%>
     <article class="article thumb-article">
-      <div class="article-img-slide">
+      <div class="article-img article-img-slide">
         <%= image_tag post.thumbnail.to_s, alt:"" %>
       </div>
       <div class="article-body">
@@ -42,7 +42,7 @@
               <% @posts.each do |post| %>
                 <div class="col-md-3 col-sm-6">
                   <article class="article">
-                    <div class="article-img-post">
+                    <div class="article-img article-img-post">
                       <%= image_tag post.thumbnail.url.to_s, alt:"" if post.thumbnail.present? %>
                       <ul class="article-info">
                         <li class="article-type"><i class="fa fa-camera"></i></li>
