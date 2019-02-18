@@ -2,17 +2,14 @@
 <html>
   <head>
     <title><%= t ".title" %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
-    <%= favicon_link_tag "logo_icon.ico" %>
+    <%= csrf_meta_tag %>
   </head>
-
   <body>
     <%= render "layouts/header" %>
-    <%= render "layouts/messages" %>
-    <div class="content">
+    <div class="container">
+      <%= render "shared/message" %>
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>

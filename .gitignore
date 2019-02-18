@@ -51,3 +51,11 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/test/*
+
+/config/settings.local.yml
+/config/settings/*.local.yml
+/config/environments/*.local.yml

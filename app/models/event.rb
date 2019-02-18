@@ -8,4 +8,6 @@ class Event < ApplicationRecord
   has_many :posts
   has_many :event_places
   has_many :place, through: :event_places
+
+  scope :select_events, -> {select :id, :name}
 end

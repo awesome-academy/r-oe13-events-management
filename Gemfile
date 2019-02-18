@@ -21,6 +21,12 @@ gem "config"
 gem "jquery-rails"
 gem "rails-i18n"
 gem "bootsnap", ">= 1.1.0", require: false
+gem "mini_magick"
+gem "carrierwave"
+gem "ckeditor"
+gem "config"
+gem "kaminari"
+gem "cancancan", "~> 2.3"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

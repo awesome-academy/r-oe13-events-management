@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="new-form">
+    <%= form_for(@post, html: {multipart: true}) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+      <div class="form-group">
+        <%= f.label :content %><span class="red-title"> *</span></label>
+        <%= f.text_area :body, minlength: Settings.min_length_text, required: true, class: "form-control ckeditor", id: "ckeditor"%>
+      </div>
+      <div>
+        <%= f.fields_for :thumbnails do |i| %>
+          <div class="field">
+            <%= i.label :thumbnail %><br/>
+            <%= i.file_field :url, multiple: true, name: "images[url][]", class: "upload-image" %>
+          </div>
+        <% end %>
+      </div> <br>
+      <div>
+        <%= f.select :event_id do %>
+          <% @events.each do |c| -%>
+            <%= content_tag :option, c.name, value: c.id %>
+          <% end %>
+        <% end %>
+      </div> <br>
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
