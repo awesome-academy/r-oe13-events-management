@@ -1,0 +1,29 @@
+<tbody id="event-<%= event.id %>">
+  <tr>
+    <td class="text-col"><%= event.name %></td>
+    <td class="text-col"><%= event.start_date %></td>
+    <td class="text-col"><%= event.end_date %></td>
+    <td class="text-col"><%= event.place.address %>...</td>
+    <td class="text-col icon_action">
+      <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:organizer,event], method: :delete,
+      data: {confirm: t(".confirm"), remote: true}, class: "delete" %>
+    </td>
+    <td class="text-col icon_action">
+      <%= link_to edit_organizer_event_path(event) do %>
+        <i class="fa fa-refresh"></i>
+      <% end %>
+    </td>
+    <td class="text-col icon_action">
+      <%= link_to organizer_event_path(event) do %>
+        <i class="fa fa-eye"></i>
+      <% end %>
+    </td>
+    <td class="text-col icon_action">
+      <% if event.status == false %>
+        <i class="alert-danger">Chờ xác nhận</i>
+      <% else %>
+        <i class="alert-success">Đã xác nhận</i>
+      <% end %>
+    </td>
+  </tr>
+</tbody>

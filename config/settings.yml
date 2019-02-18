@@ -1,6 +1,9 @@
 avatar_size_max: 5
-thumbnail_size_max: 5
+banner_size_max: 5
 min_length_text: 50
+limit_event_new: 3
+thumbnail_size_max: 5
+
 role_admin: "admin"
 role_organizer: "organizer"
 role_member: "member"

@@ -5,7 +5,6 @@ class Organizer::BaseController < ApplicationController
   private
 
   def require_organizer
-  	flash[:notice] = t ".organizer_page"
-  	redirect_to root_path unless current_user.role_name == Settings.role_organizer
+    redirect_to root_path unless current_user.role_name == Settings.role_organizer
   end
 end

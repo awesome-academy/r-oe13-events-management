@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= t ".manage_event" %></h1>
+      <hr>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th class="text-col"><%= t ".name" %></th>
+              <th class="text-col"><%= t ".start_date" %></th>
+              <th class="text-col"><%= t ".end_date" %></th>
+              <th class="text-col icon_action"><%= t ".address" %></th>
+              <th class="text-col"><%= t ".delete" %></th>
+              <th class="text-col"><%= t ".update" %></th>
+              <th class="text-col"><%= t ".detail" %></th>
+              <th class="text-col"><%= t ".status" %></th>
+            </tr>
+          </thead>
+          <%= render @events %>
+        </table>
+      </div>
+      <%= paginate @events, theme: "twitter-bootstrap-3" %>
+    </div>
+  </div>
+</div>

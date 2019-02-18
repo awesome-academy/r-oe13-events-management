@@ -73,13 +73,13 @@ ActiveRecord::Schema.define(version: 2019_02_12_133036) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.date "start_date"
-    t.date "end_date"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.text "description"
     t.bigint "place_id"
     t.integer "create_by"
     t.string "banner"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_events_on_place_id"

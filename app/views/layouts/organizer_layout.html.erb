@@ -2,14 +2,20 @@
 <html>
   <head>
     <title><%= t ".title" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
-    <%= csrf_meta_tag %>
+    <%= favicon_link_tag "logo_icon.ico" %>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYc3U2zpF5V8DiAsY9PSSq0SF_CeRbdkA&callback=initMap&libraries=places">
+    </script>
   </head>
+
   <body>
     <%= render "layouts/header" %>
-    <div class="container">
-      <%= render "shared/message" %>
+    <%= render "layouts/messages" %>
+    <div class="content">
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
