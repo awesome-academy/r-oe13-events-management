@@ -48,7 +48,7 @@ class Organizer::PostsController < Organizer::BaseController
   private
 
   def post_params
-    params.require(:post).permit :title, :body, :event_id
+    params.require(:post).permit :title, :body, :thumbnail, :event_id
   end
 
   def load_posts

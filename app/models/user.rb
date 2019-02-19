@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   extend Devise::Models
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
-  before_validation :set_default_role
+  before_validation :set_default_role, on: :create
   has_many :user_settings
   has_many :categories, through: :user_settings
   has_many :user_events
@@ -23,6 +23,6 @@ class User < ApplicationRecord
   end
 
   def set_default_role
-    self.role = Role.find_by_name(Settings.role_member)
+    self.role ||= Role.find_by_name(Settings.role_member)
   end
 end

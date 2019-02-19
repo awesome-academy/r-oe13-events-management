@@ -1,5 +1,38 @@
 vi:
+  not_found_event: "Không tìm thấy sự kiện"
   file_less_than: "Cần nhỏ hơn 5MB"
+  success: "Thành công"
+  error: "Thất bại"
+  events:
+    all_event:
+      event: "Sự kiện"
+      address: "Địa chỉ"
+    event:
+      confirm: "bạn muốn xóa?"
+    edit:
+      update_event: "Cập nhật sự kiện"
+    index:
+      event_new: "Sự kiện mới"
+      event: "Sự kiện"
+      all_event: "Tất cả sự kiện"
+    myevents:
+      manage_event: "Quản lý sự kiện"
+      name: "Tên sự kiện"
+      start_date: "Ngày bắt đầu"
+      end_date: "Ngày kết thúc"
+      address: "Địa chỉ"
+      delete: "Xóa"
+      update: "Cập nhật"
+      detail: "Chi tiết"
+    new:
+      create_event: "Tạo Sự Kiện"
+    show:
+      start_date: "Ngày bắt đầu:"
+      end_date: "Ngày kết thúc:"
+      description: "Mô tả:"
+      place: "Địa chỉ:"
+      map: "Bản đồ:"
+      notice: "(A là địa điểm hiện tại của bạn, B là địa điểm tổ chứ sự kiện. Vui lòng tải lại trang nếu không hiện chỉ đường)"
   layouts:
     footer:
       about_me: "Về chúng tôi"
@@ -31,3 +64,55 @@ vi:
       donation: "Quyên góp"
       manage_donate: "Quản lý quỹ"
       statistical: "Thống kê"
+    sidebar:
+      contact_us: "Liên lạc với chúng tôi"
+      facebook: "Facebook"
+      twitter: "Twitter"
+      google: "Google+"
+      instagram: "Instagram"
+      youtube: "Youtube"
+      rrs: "RSS"
+      signin_notice: "Đăng kí nhận thông báo"
+      signin: "Đăng kí"
+      read: "Đọc nhiều"
+    application:
+      title: "ROe13EventsManagement"
+    organizer_layout:
+      title: "ROe13EventsManagement"
+      new_post_title: "Tạo bài đăng mới"
+  organizer:
+    posts:
+      no_post: "Không có bài viết"
+      organizer_page: "Đây là trang tổ chức"
+      update:
+        update_cuccess: "Cập nhật thành công"
+        update_fail: "Cập nhật thất bại"
+      destroy:
+        delete_success: "Xóa thành công"
+        delete_fail: "Xóa thất bại"
+      index:
+        post_title: "Tất cả bài viết"
+        index: "Chỉ mục"
+        title: "Tiêu đề"
+        content: "Nội dung"
+        event: "Sự kiện"
+        delete: "Xóa"
+        update: "Cập nhật"
+        organizer_page: "Đây là trang tổ chức"
+        confirm_delete: "Bạn có chắc không?"
+        read_more: "Đọc_more"
+      new:
+        new_post_title: "Tạo bài đăng mới"
+        created_success: "Tạo thành công"
+        create_fail: "Tạo thất bại"
+        new_post_title: "Tạo bài đăng mới"
+        save: "Lưu"
+        organizer_page: "Đây là trang tổ chức"
+  posts:
+    index:
+      posts: "Bài viết"
+      all: "Tất cả"
+      event: "Sự kiện"
+      donate: "Quyên góp"
+      new: "Mới"
+

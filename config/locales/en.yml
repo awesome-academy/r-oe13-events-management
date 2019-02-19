@@ -1,4 +1,31 @@
 en:
+  not_found_event: "No event found"
+  file_less_than: "Need less than 5MB"
+  success: "Success"
+  error: "Failed"
+  events:
+    all_event:
+      event: "Events"
+      address: "Address"
+    event:
+      confirm: "you want to delete?"
+    edit:
+      update_event: "Update event"
+    index:
+      event_new: "New event"
+      event: "Events"
+      all_event: "All events"
+    myevents:
+      manage_event: "Event management"
+      name: "Event name"
+      start_date: "Start date"
+      end_date: "End date"
+      address: "Address"
+      delete: "Delete"
+      update: "Update"
+      detail: "Details"
+    new:
+      create_event: "Create Event"
   layouts:
     footer:
       about_me: "About us"
@@ -15,40 +42,69 @@ en:
       advertisement: "Advertising"
       privacy: "Private"
       login: "Login"
+      logout: "Sign out"
+      edit: "Edit"
       home: "Home"
-      new: "New news"
+      post: "Article"
+      create_post: "Create posts"
+      all_post: "All posts"
+      manage_post: "Manage posts"
       event: "Events"
+      create_event: "Create event"
+      all_event: "All events"
+      manage_event: "Event management"
       category: "Category"
       donation: "Donate"
+      manage_donate: "Fund management"
+      statistical: "Statistics"
+    sidebar:
+      contact_us: "Contact us"
+      facebook: "Facebook"
+      twitter: "Twitter"
+      google: "Google+"
+      instagram: "Instagram"
+      youtube: "Youtube"
+      rrs: "RSS"
+      signin_notice: "Sign up for notifications"
+      signin: "Register"
+      read: "Read more"
     application:
       title: "ROe13EventsManagement"
     organizer_layout:
       title: "ROe13EventsManagement"
-      new_post_title: "Create new Post"
+      new_post_title: "Create new post"
   organizer:
     posts:
-      no_post: "No post"
-      organizer_page: "This is organizer page"
-      update: 
-        update_cuccess: "Update success"
-        update_fail: "Update fail"
+      no_post: "No posts"
+      organizer_page: "This is the organization page"
+      update:
+        update_cuccess: "Update successfully"
+        update_fail: "Update failed"
       destroy:
         delete_success: "Delete success"
-        delete_fail: "Delete fail"
+        delete_fail: "Delete failure"
       index:
-        post_title: "All Post"
+        post_title: "All posts"
         index: "Index"
         title: "Title"
         content: "Content"
-        event: "Event"
+        event: "Events"
         delete: "Delete"
         update: "Update"
-        organizer_page: "This is organizer page"
+        organizer_page: "This is the organization page"
         confirm_delete: "Are you sure?"
+        read_more: "Read_more"
       new:
-        new_post_title: "Create new Post"
-        create_success: "Create success"
-        create_fail: "Create fail"
-        new_post_title: "Create new Post"
+        new_post_title: "Create new post"
+        created_success: "Create successfully"
+        create_fail: "Create failed"
+        new_post_title: "Create new post"
         save: "Save"
-        organizer_page: "This is organizer page"
+        organizer_page: "This is the organization page"
+  post:
+    index:
+      posts: "Posts"
+      all: "All"
+      event: "Events"
+      donate: "Donate"
+      new: "New"
