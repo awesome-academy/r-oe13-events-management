@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+  <span id="form-comment">
+    <%= form_for [@post, @comment] do |f| %>
+      <%= f.hidden_field :parent_id, value: parent_id %>
+      <%= f.hidden_field :post_id, value: post.id %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.text_area :body, placeholder: t(".write_comment"),
+        required: true, class: "form-control" %>
+      <%= f.submit t(".comment"), class: "btn btn-xs btn-custom2" %>
+    <% end %>
+  </span>
+<% else %>
+  <% flash[:notice] = t ".not_member" %>
+<% end %>

@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
   belongs_to :event
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :users, through: :comments
   mount_uploader :thumbnail, ThumbnailUploader
   validate :thumbnail_size
+  validates :body, presence: true
   
   scope :select_posts, -> {select :id, :title, :body, :thumbnail, :event_id}
   scope :order_by, -> {order created_at: :desc}

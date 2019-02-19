@@ -126,6 +126,8 @@ vi:
       event: "Sự kiện"
       donate: "Quyên góp"
       new: "Mới"
+    show:
+      comments: "Bình luận"
   admin:
     users:
       index:
@@ -160,3 +162,11 @@ vi:
       previous: "‹"
       next: "›"
       truncate: "…"
+  comments:
+    comment:
+      delete: "Xóa"
+      sure: "Bạn thực sự muốn xóa?"
+    form:
+      write_comment: "Viết bình luận"
+      comment: "Bình luận"
+

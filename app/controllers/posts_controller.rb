@@ -6,7 +6,10 @@ class PostsController < ApplicationController
     @posts = @q.result
   end
 
-  def show; end
+  def show
+    @comment = Comment.new
+    @comments = @post.comments
+   end
 
   private
 
