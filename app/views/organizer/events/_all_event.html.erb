@@ -1,0 +1,34 @@
+<article class="article row-article">
+  <div class="article-img">
+    <a href="#">
+      <%= image_tag(event.banner.url, alt:"") %>
+    </a>
+  </div>
+  <div class="article-body">
+    <ul class="article-info">
+      <li class="article-category">
+        <%= link_to t(".event"), organizer_event_path(event) %>
+      </li>
+      <li class="article-type"><i class="fa fa-file-text"></i></li>
+    </ul>
+    <h3 class="article-title">
+      <%= link_to event.name, organizer_event_path(event) %>
+    </h3>
+    <ul class="article-meta">
+      <li><i class="fa fa-clock-o"></i> <%= event.start_date %></li>
+      <% if Time.current > event.end_date %>
+        <li><i class="fa fa-clock-o"></i> <%= t ".event_finish" %></li>
+      <% else %>
+        <% if time_ago_in_words(event.start_date).to_i > 0 %>
+          <li><i class="fa fa-clock-o"></i> <%= time_ago_in_words(event.start_date) %> <%= t ".event_incoming" %></li>
+        <% elsif time_ago_in_words(event.start_date).to_i == 0 %>
+          <li><i class="fa fa-clock-o"></i> <%= t ".event_starting" %></li>
+        <% end %>
+      <% end %>
+      <li><i class="fa fa-comments"></i> 33</li>
+    </ul>
+    <h4><%= t ".address" %></h4>
+    <%= event.place.address %>
+  </div>
+</article>
+<hr>

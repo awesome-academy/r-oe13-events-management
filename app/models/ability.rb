@@ -8,6 +8,7 @@ class Ability
     elsif role == Settings.role_organizer
       can :create, Post
       can :read, :all
+      can [:create, :myevents], Event
     else
       can :read, :all
     end

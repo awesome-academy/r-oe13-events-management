@@ -1,0 +1,21 @@
+<%= javascript_tag "show.js" do %>
+  var event_lat = <%= @event.place.latitude.to_f %>;
+  var event_lng = <%= @event.place.longitude.to_f %>;
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= @event.name %></h1>
+      <hr>
+      <h5><%= t ".start_date" %></h5><%= @event.start_date %>
+      <h5><%= t ".end_date" %></h5><%= @event.end_date %>
+      <h3><%= t ".description" %></h3>
+      <%= @event.description.html_safe %>
+      <h3><%= t ".place" %></h3>
+      <p><%= @event.place.address %></p>
+      <h3><%= t ".map" %></h3>
+      <i><%= t ".notice" %></i>
+      <div id="map-canvas"></div>
+    </div>
+  </div>
+</div>

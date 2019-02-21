@@ -70,9 +70,13 @@
           </li>
           <li><%= link_to t(".event") %>
             <ul class="sub-menu">
-              <li><%= link_to t(".create_event") %></li>
-              <li><%= link_to t(".all_event") %></li>
-              <li><%= link_to t(".manage_event") %></li>
+              <% if can? :create, Event %>
+                <li><%= link_to t(".create_event"), new_organizer_event_path %></li>
+                <li><%= link_to t(".manage_event"), myevents_organizer_events_path %></li>
+                <li><%= link_to t(".all_event"), organizer_events_path %></li>
+              <% else %>
+                <li><%= link_to t(".all_event"), organizer_events_path %></li>
+              <% end %>
             </ul>
           </li>
           <li><%= link_to t(".category") %></li>

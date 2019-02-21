@@ -1,0 +1,19 @@
+<%= javascript_tag "edit.js" do %>
+  var eventlat = <%= @event.place.latitude.to_f %>;
+  var eventlng = <%= @event.place.longitude.to_f %>;
+<% end %>
+<% provide :button_text,t(".update_event") %>
+<% provide :action_path, organizer_event_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= t ".update_event" %></h1>
+      <hr>
+      <%= render "form" %>
+      <hr>
+    </div>
+  </div>
+</div>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYc3U2zpF5V8DiAsY9PSSq0SF_CeRbdkA&callback=initMap1&libraries=places">
+</script>
