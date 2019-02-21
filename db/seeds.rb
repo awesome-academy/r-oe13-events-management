@@ -2,20 +2,28 @@ Event.create!(name: "Charity in HaNoi")
 
 Event.create!(name: "Charity in Ho Chi Minh")
 
-array = ["admin", "organizer", "member", "guest"]
+array = ["admin", "organizer", "member"]
 
 array.each do |role|
   Role.create! name: "#{role}"
 end
 
-User.create!(name: "admin",
-	         phone_number: "0123456789",
-             address: "hanoi",
-             role_id: 1,
-             email: "admin112@gmail.com",
-             password: "111111")
+name = "Hoang Anh Quan"
+email = "anhquanhh4@gmail.com"
+password = "123123"
+role_id = 1
+User.create(name: name, email: email, password: password, role_id: role_id)
+
+50.times do |n|
+  name = "Tai khoan #{n+1}"
+  email = "tk#{n+1}@gmail.com"
+  password = "123123"
+  role_id = 3
+  User.create!(name: name, email: email, password: password, role_id: role_id)
+end
+
 User.create!(name: "organizer",
-	         phone_number: "0123456789",
+           phone_number: "0123456789",
              address: "hanoi",
              role_id: 2,
              email: "organizer122@gmail.com",

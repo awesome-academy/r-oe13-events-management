@@ -1,0 +1,31 @@
+<tr id= "user-<%= user.id %>">
+  <td class="col-md-1 col-xs-1 col-ms-1 col-lg-1"><%= image_tag("#{user.avatar}", class: "img-responsive") %></td>
+  <td class="col-md-3 col-xs-3 col-ms-3 col-lg-3"> <%= user.name %></td>
+  <td class="col-md-3 col-xs-3 col-ms-3 col-lg-3"><%= user.email %></td>
+  <%= form_for user do |f| %>
+     <td class="col-md-2 col-xs-2 col-ms-2 col-lg-2">
+      <% if user.check_role(Settings.role_admin) %>
+        <%= user.role_name %>
+      <% else %>
+        <%= f.select :role_id, all_roles %>
+      <% end %>
+    </td>
+    <td class="col-md-1 col-xs-1 col-ms-1 col-lg-1">
+      <%= link_to user, method: :get, class: "btn btn-default" do %>
+          <span class="glyphicon glyphicon-eye-open"></span>
+      <% end %>
+    </td>
+    <% unless user.check_role(Settings.role_admin) %>
+      <td class="col-md-1 col-xs-1 col-ms-1 col-lg-1">
+        <%= button_to user_path(user.id), method: :put, class: "btn btn-success" do %>
+            <span class="glyphicon glyphicon-ok"></span>
+        <% end %>
+      </td>
+      <td class="col-md-1 col-xs-1 col-ms-1 col-lg-1">
+        <%= button_to admin_user_path(user.id), data: { confirm: t("sure") }, method: :delete, remote: true, class: "btn btn-danger" do %>
+            <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      </td>
+    <% end %>
+  <% end %>
+</tr>
