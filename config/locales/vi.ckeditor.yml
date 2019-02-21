@@ -1,0 +1,9 @@
+vi:
+  ckeditor:
+    page_title: "CKEditor Quản lý file"
+    confirm_delete: "Xóa file?"
+    buttons:
+      cancel: "Đóng"
+      upload: "Tải lên"
+      delete: "Xóa"
+      next: "Tiếp theo"

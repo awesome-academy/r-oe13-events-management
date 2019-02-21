@@ -8,14 +8,10 @@
         <%= f.label :content %><span class="red-title"> *</span></label>
         <%= f.text_area :body, minlength: Settings.min_length_text, required: true, class: "form-control ckeditor", id: "ckeditor"%>
       </div>
-      <div>
-        <%= f.fields_for :thumbnails do |i| %>
-          <div class="field">
-            <%= i.label :thumbnail %><br/>
-            <%= i.file_field :url, multiple: true, name: "images[url][]", class: "upload-image" %>
-          </div>
-        <% end %>
-      </div> <br>
+      <div class="form-group">
+        <%= f.label :thumbnail %><br/>
+        <%= f.file_field :thumbnail, class: "upload-image" %>
+      </div>
       <div>
         <%= f.select :event_id do %>
           <% @events.each do |c| -%>

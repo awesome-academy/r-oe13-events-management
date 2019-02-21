@@ -21,7 +21,9 @@
             <%= create_index params[:page], index, Settings.post_page %>
           </td>
           <td class="text-col"><%= post.title %></td>
-          <td class="text-col"><%= post.body.html_safe %></td>
+          <td class="text-col">
+            <%= truncate post.body.html_safe, length: 100 if post.body.present? %>
+            <%= link_to t(".read_more"), post %></td>
           <td class="text-col"><%= post.event.name %></td>
           <td class="text-col">
             <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:organizer, post], method: :delete,

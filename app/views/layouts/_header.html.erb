@@ -64,9 +64,8 @@
               <% if can? :create, Post %>
                 <li><%= link_to t(".create_post"), new_organizer_post_path %></li>
                 <li><%= link_to t(".manage_post"), organizer_posts_path %></li>
-              <% else %>
-                <li><%= link_to t(".all_post"), "#" %>
               <% end %>
+              <li><%= link_to t(".all_post"), posts_path %>
             </ul>
           </li>
           <li><%= link_to t(".event") %>
@@ -85,15 +84,6 @@
           </li>
         </ul>
       </nav>
-      <div class="button-nav">
-        <button class="search-collapse-btn"><i class="fa fa-search"></i></button>
-        <button class="nav-collapse-btn"><i class="fa fa-bars"></i></button>
-        <div class="search-form">
-          <form>
-            <input class="input" type="text" name="search" placeholder="Search">
-          </form>
-        </div>
-      </div>
     </div>
   </div>
 </header>

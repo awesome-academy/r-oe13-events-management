@@ -7,6 +7,7 @@ class Ability
       can :manager, :all
     elsif role == Settings.role_organizer
       can :create, Post
+      can :read, :all
     else
       can :read, :all
     end
