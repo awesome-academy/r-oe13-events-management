@@ -1,41 +1,45 @@
 <% provide :title, t(".post_title") %>
-<div class="kenh14-border" id="blog-title" >
-  <h1><%= t ".post_title" %></h1>
-</div>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th class="text-col"><%= t ".index" %></th>
-        <th class="text-col"><%= t ".title" %></th>
-        <th class="text-col"><%= t ".content" %></th>
-        <th class="text-col"><%= t ".event" %></th>
-        <th class="text-col"><%= t ".delete" %></th>
-        <th class="text-col"><%= t ".update" %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @posts.each.with_index do |post, index| %>
+<div class="container">
+  <div class="kenh14-border" id="blog-title" >
+    <h1><%= t ".post_title" %></h1>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-dark">
         <tr>
-          <td class="text-col">
-            <%= create_index params[:page], index, Settings.post_page %>
-          </td>
-          <td class="text-col"><%= post.title %></td>
-          <td class="text-col">
-            <%= truncate post.body.html_safe, length: 100 if post.body.present? %>
-            <%= link_to t(".read_more"), post %></td>
-          <td class="text-col"><%= post.event.name %></td>
-          <td class="text-col">
-            <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:organizer, post], method: :delete,
-            data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" %>
-          </td>
-          <td class="text-col">
-            <%= link_to edit_organizer_post_path(post) do %>
-              <i class="fa fa-refresh"></i>
-            <% end %>
-          </td>
+          <th class="text-col"><%= t ".index" %></th>
+          <th class="text-col"><%= t ".title" %></th>
+          <th class="text-col"><%= t ".content" %></th>
+          <th class="text-col"><%= t ".event" %></th>
+          <th class="text-col"><%= t ".delete" %></th>
+          <th class="text-col"><%= t ".update" %></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @posts.each.with_index do |post, index| %>
+          <tr>
+            <td class="text-col">
+              <%= create_index params[:page], index, Settings.post_page %>
+            </td>
+            <td class="text-col"><%= post.title %></td>
+            <td class="text-col">
+              <%= truncate post.body.html_safe, length: 100 if post.body.present? %>
+              <%= link_to t(".read_more"), post %></td>
+            <td class="text-col"><%= post.event.name %></td>
+            <td class="text-col">
+              <%= link_to [:organizer, post], method: :delete,
+              data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" do %>
+                <span class='glyphicon glyphicon-trash text-danger'></span>
+              <% end %>
+            </td>
+            <td class="text-col">
+              <%= link_to edit_organizer_post_path(post) do %>
+                <i class="fa fa-refresh"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

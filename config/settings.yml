@@ -1,8 +1,9 @@
 avatar_size_max: 5
 banner_size_max: 5
 min_length_text: 50
-limit_event_new: 3
+limit_event_new: 4
 thumbnail_size_max: 5
+per_paginate_posts_event: 4
 
 role_admin: "admin"
 role_organizer: "organizer"

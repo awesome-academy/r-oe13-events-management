@@ -6,7 +6,9 @@ class Organizer::EventsController < Organizer::BaseController
     @event.build_place
   end
 
-  def show; end
+  def show
+    @posts = @event.posts.page(params[:page]).per(Settings.per_paginate_posts_event)
+  end
 
   def index
     @events = Event.event_index.order_desc.page params[:page]
@@ -42,7 +44,7 @@ class Organizer::EventsController < Organizer::BaseController
   def destroy
     respond_to do |format|
       if @event.destroy
-        format.js
+        format.js {flash[:success] = t("success")}
         format.html {flash[:success] = t("success")}
       else
         format.js

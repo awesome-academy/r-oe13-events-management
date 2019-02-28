@@ -67,6 +67,7 @@ vi:
         place: "Địa chỉ:"
         map: "Bản đồ:"
         notice: "(A là địa điểm hiện tại của bạn, B là địa điểm tổ chứ sự kiện. Vui lòng tải lại trang nếu không hiện chỉ đường)"
+        posts_event: "Bài viết liên quan:"
   layouts:
     admin_layout:
       title: "ROe13EventsManagement"

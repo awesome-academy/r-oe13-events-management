@@ -1,4 +1,4 @@
-function initMap1(){
+function initMapedit(){
   var options = {
     zoom: 18,
     center: {

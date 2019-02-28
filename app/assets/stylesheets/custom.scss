@@ -627,7 +627,6 @@ textarea.input {
 
 .article .article-img img {
   width:100%;
-  height: 330px;
   -webkit-transition:0.5s -webkit-transform;
   transition:0.5s -webkit-transform;
   transition:0.5s transform;
@@ -637,6 +636,32 @@ textarea.input {
 .article .article-img-post img {
   width:100%;
   height:130px;
+  -webkit-transition:0.5s -webkit-transform;
+  transition:0.5s -webkit-transform;
+  transition:0.5s transform;
+  transition:0.5s transform, 0.5s -webkit-transform;
+}
+
+.article .article-img-eventnew img {
+  width:100%;
+  height:330px;
+  -webkit-transition:0.5s -webkit-transform;
+  transition:0.5s -webkit-transform;
+  transition:0.5s transform;
+  transition:0.5s transform, 0.5s -webkit-transform;
+}
+.article .article-img-home-posts img {
+  width:100%;
+  height:263px;
+  -webkit-transition:0.5s -webkit-transform;
+  transition:0.5s -webkit-transform;
+  transition:0.5s transform;
+  transition:0.5s transform, 0.5s -webkit-transform;
+}
+
+.article .article-img-allevent img {
+  width:400px;
+  height:400px;
   -webkit-transition:0.5s -webkit-transform;
   transition:0.5s -webkit-transform;
   transition:0.5s transform;
@@ -1251,7 +1276,7 @@ textarea.input {
 .article-share > a.facebook {
   color: #FFF;
   background-color: #3b5999;
-  
+
 }
 
 .article-share > a.twitter {
@@ -1391,10 +1416,12 @@ textarea.input {
     top: 0;
     right: 0;
     border-radius: 50%;
-    color: #07051a;
+    color: white;
     text-align: center;
     font-size: 0.6em;
     transition: all 1s;
+    background: $DodgerBlue;
+    border: none;
 }
 
 .search-container:hover{

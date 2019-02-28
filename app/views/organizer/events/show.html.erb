@@ -19,3 +19,22 @@
     </div>
   </div>
 </div>
+<% if @posts.present? %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3><%= t ".posts_event" %></h3>
+        <hr>
+        <div id="posts-event">
+          <%= render partial:"organizer/events/post", collection: @posts, as: :post %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" id="paginator-post">
+    <%= paginate @posts, remote: true, theme: "twitter-bootstrap-3" %>
+  </div>
+<% end %>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYc3U2zpF5V8DiAsY9PSSq0SF_CeRbdkA&callback=initMapshow&libraries=places">
+</script>
