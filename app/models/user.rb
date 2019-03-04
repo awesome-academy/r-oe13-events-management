@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :user_events
   has_many :notifications
   has_many :events, through: %i(user_events notifications)
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :posts, through: :comments
   mount_uploader :avatar, AvatarUploader
   scope :not_current_user, -> (current_user_id){where.not id: current_user_id}

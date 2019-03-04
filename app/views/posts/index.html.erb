@@ -52,7 +52,7 @@
                       <h4 class="article-title"><%= link_to post.title, post_path(post)%></h4>
                       <ul class="article-meta">
                         <li><i class="fa fa-clock-o"></i><%= post.created_at%></li>
-                        <li><i class="fa fa-comments"></i> 33</li>
+                        <li><i class="fa fa-comments"></i><%= post.comments.count %></li>
                       </ul>
                     </div>
                   </article>
